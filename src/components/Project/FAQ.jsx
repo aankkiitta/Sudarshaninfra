@@ -16,22 +16,18 @@ const FAQ = ({ faqs = [] }) => {
     <section className="faq-section">
       <div className="faq-container">
 
-        {/* LEFT: Heading + Description */}
+        {/* LEFT: Sticky wrapper */}
         <div className="faq-left">
-          <ScrollReveal animation="fade-left">
+          <div className="faq-left-inner">
             <h2 className="faq-title">
               Any questions?<br />
               We got you.
             </h2>
-          </ScrollReveal>
 
-          <ScrollReveal animation="fade-left" delay={150}>
             <p className="faq-desc">
-              Yet bed any for assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment.
+              Find answer to common question about our office Furniture solutions.
             </p>
-          </ScrollReveal>
 
-          <ScrollReveal animation="fade-up" delay={300}>
             <a href="#contact" className="faq-link">
               More FAQs
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -39,7 +35,7 @@ const FAQ = ({ faqs = [] }) => {
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </a>
-          </ScrollReveal>
+          </div>
         </div>
 
         {/* RIGHT: Accordion */}

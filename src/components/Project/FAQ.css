@@ -12,15 +12,22 @@
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 80px;
-  align-items: start;
+  align-items: start;              /* 👈 Important */
 }
 
 /* =========================================
-   LEFT: Heading + Description
+   LEFT: Sticky heading
    ========================================= */
 .faq-left {
   position: sticky;
   top: 120px;
+  align-self: start;
+  height: fit-content;
+  z-index: 1;
+}
+
+.faq-left-inner {
+  /* plain wrapper — no transform, no animation */
 }
 
 .faq-title {
@@ -74,7 +81,6 @@
   width: 100%;
 }
 
-/* ScrollReveal wrapper */
 .faq-right > .sr {
   display: block;
   width: 100%;
@@ -162,8 +168,11 @@
     gap: 45px;
   }
 
+  /* Mobile pe sticky off */
   .faq-left {
     position: static;
+    align-self: auto;
+    height: auto;
   }
 
   .faq-title {
