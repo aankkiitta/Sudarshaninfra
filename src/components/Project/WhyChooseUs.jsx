@@ -6,28 +6,34 @@ import './WhyChooseUs.css';
 
 const whyChooseData = [
   {
-    icon: "workstation",
-    title: "High Quality Products",
-    desc: "The luxurious and exquisite design harmonious with the surrounding architecture provide optimal comfort, modernity and the best living conditions for every family.",
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=1200"
+    icon: "tools",
+    title: "Experienced & Dedicated Team",
+    desc: "Skilled technicians and dedicated staff for electrical, carpentry, plumbing, and civil works.",
+    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=1200"
   },
   {
-    icon: "tools",
-    title: "Premium Craftsmanship",
-    desc: "High-grade materials and finishes ensuring durability, comfort, and long-lasting performance for years to come in every project we deliver.",
+    icon: "installation",
+    title: "Complete Maintenance Solutions",
+    desc: "A single service partner for office repairs, preventive maintenance, interiors, and infrastructure projects.",
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200"
   },
   {
     icon: "conference",
-    title: "Expert Team",
-    desc: "Experienced professionals delivering precision, craftsmanship, and attention to every single detail throughout the entire project journey.",
+    title: "Responsive Service & Support",
+    desc: "Round-the-clock contact availability and a two-hour response target for logged calls.",
     image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=1200"
   },
   {
-    icon: "building",
-    title: "Modern Architecture",
-    desc: "Functional and contemporary designs that enhance productivity, aesthetics, and overall living experience for every space we craft.",
+    icon: "security",
+    title: "Quality & Accountability",
+    desc: "Work is carried out with client approval, supported by preventive inspections and maintenance reporting.",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200"
+  },
+  {
+    icon: "building",
+    title: "Proven Client Relationships",
+    desc: "Sudharshan Infra has been associated with DSP BlackRock Investment Managers Pvt. Ltd. for over eight years, delivering trusted infrastructure and maintenance services.",
+    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=1200"
   }
 ];
 
@@ -54,11 +60,11 @@ const WhyChooseUs = () => {
             <span className="wcu-tag">Why Choose Us</span>
           </ScrollReveal>
           <ScrollReveal animation="fade-up" delay={100}>
-            <h2 className="wcu-main-title">Why Choose Sudharshan Infra</h2>
+            <h2 className="wcu-main-title">Why Choose Sudharshan Infra?</h2>
           </ScrollReveal>
           <ScrollReveal animation="fade-up" delay={200}>
             <p className="wcu-main-desc">
-              Your trusted partner for innovative, high-quality, and turnkey office interior solutions.
+              We deliver dependable infrastructure and facility maintenance solutions backed by experienced technicians, dedicated service, and a commitment to quality. From preventive maintenance to complete office projects, we help keep workplaces functional, safe, and well-maintained.
             </p>
           </ScrollReveal>
         </div>
@@ -66,12 +72,12 @@ const WhyChooseUs = () => {
         {/* Slider */}
         <div className="wcu-slider">
 
-          {/* LEFT: Image (20% hidden) */}
+          {/* LEFT: Image */}
           <ScrollReveal animation="fade-right" delay={100}>
             <div className="wcu-left">
-              <img 
+              <img
                 key={currentIndex}
-                src={current.image} 
+                src={current.image}
                 alt={current.title}
                 className="wcu-image"
               />
@@ -80,7 +86,7 @@ const WhyChooseUs = () => {
 
           {/* RIGHT: Content */}
           <div className="wcu-right">
-            
+
             <ScrollReveal animation="fade-left" delay={100}>
               <div className="wcu-icon">
                 <Icon name={current.icon} size={40} color="#7a1f1f" />
@@ -97,8 +103,8 @@ const WhyChooseUs = () => {
 
             <ScrollReveal animation="fade-up" delay={400}>
               <div className="wcu-controls">
-                <button 
-                  className="wcu-arrow" 
+                <button
+                  className="wcu-arrow"
                   onClick={handlePrev}
                   aria-label="Previous"
                 >
@@ -107,8 +113,8 @@ const WhyChooseUs = () => {
                   </svg>
                 </button>
 
-                <button 
-                  className="wcu-arrow" 
+                <button
+                  className="wcu-arrow"
                   onClick={handleNext}
                   aria-label="Next"
                 >

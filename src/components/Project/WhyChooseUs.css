@@ -16,7 +16,7 @@
    ========================================= */
 .wcu-header {
   text-align: center;
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto 60px;
   padding: 0 20px;
 }
@@ -50,7 +50,7 @@
   font-size: 2.4rem;
   font-weight: 700;
   color: #1e293b;
-  margin: 0 0 14px;
+  margin: 0 0 16px;
   line-height: 1.2;
   letter-spacing: -0.3px;
 }
@@ -114,7 +114,7 @@
   width: 60px;
   height: 60px;
   margin-bottom: 25px;
-  color: #7a1f1f;
+  color: #7a1f1f;                     /* 👈 MAROON */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,9 +127,9 @@
 
 .wcu-title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 2rem;
-  font-weight: 500;
-  color: #7a1f1f;
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #7a1f1f;                     /* 👈 MAROON */
   line-height: 1.25;
   margin: 0 0 20px;
   letter-spacing: -0.3px;
@@ -144,6 +144,9 @@
   max-width: 480px;
 }
 
+/* =========================================
+   Controls — MAROON
+   ========================================= */
 .wcu-controls {
   display: flex;
   gap: 12px;
@@ -154,8 +157,8 @@
   height: 50px;
   border-radius: 0;
   background: transparent;
-  border: 1px solid #e2e8f0;
-  color: #64748b;
+  border: 1px solid #7a1f1f;          /* 👈 MAROON border */
+  color: #7a1f1f;                     /* 👈 MAROON arrow */
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -170,7 +173,7 @@
 }
 
 .wcu-arrow:hover {
-  background-color: #7a1f1f;
+  background-color: #7a1f1f;          /* 👈 MAROON fill */
   border-color: #7a1f1f;
   color: #ffffff;
 }
@@ -257,7 +260,7 @@
     min-height: auto;
   }
 
-  /* 👇 Image — 20% left white space */
+  /* Image — 20% left white space */
   .wcu-left {
     width: 100%;
     overflow: hidden;
@@ -287,7 +290,7 @@
   }
 
   .wcu-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-bottom: 16px;
     line-height: 1.25;
   }
