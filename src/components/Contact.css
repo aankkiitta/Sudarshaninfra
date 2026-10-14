@@ -1,0 +1,210 @@
+/* src/components/Contact.css */
+
+.contact-section {
+  width: 100%;
+  padding: 0 20px 70px;
+  background-color: #fdf5f2; /* Cream — neeche wala hissa */
+  position: relative;
+  overflow: hidden;
+}
+
+/* 👇 Upper portion ko White banaya */
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90px; /* 👈 White space ki height */
+  background-color: #ffffff;
+  z-index: 0;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================
+   Header — "Contact Us" on the Boundary
+   ========================================= */
+.contact-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+
+  /* 👇 White aur Cream ke beech boundary par */
+  padding-top: 45px;
+  margin-bottom: 60px;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* Left Line */
+.contact-header::before {
+  content: "";
+  flex: 1;
+  max-width: 200px;
+  height: 1.5px;
+  background-color: #7a1f1f;
+}
+
+/* Right Line */
+.contact-header::after {
+  content: "";
+  flex: 1;
+  max-width: 200px;
+  height: 1.5px;
+  background-color: #7a1f1f;
+}
+
+/* Title Box */
+.contact-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.3px;
+
+  background-color: #7a1f1f;
+  padding: 14px 40px;
+  border-radius: 4px;
+  box-shadow: 0 8px 25px rgba(122, 31, 31, 0.25);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+  flex-shrink: 0;
+}
+
+.contact-title .title-text {
+  flex-shrink: 0;
+}
+
+/* =========================================
+   Grid Layout
+   ========================================= */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-items: start;
+  padding-top: 10px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contact-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  color: #7a1f1f;
+}
+
+.contact-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-text h4 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contact-text p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.contact-text p a {
+  color: #1e293b;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.contact-text p a:hover {
+  color: #7a1f1f;
+  border-bottom-color: #7a1f1f;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-section { padding: 0 16px 60px; }
+  
+  .contact-section::before {
+    height: 70px; /* Mobile par white area chhota */
+  }
+
+  .contact-header {
+    padding-top: 35px;
+    margin-bottom: 40px;
+    gap: 12px;
+  }
+
+  .contact-header::before,
+  .contact-header::after {
+    max-width: 50px;
+  }
+
+  .contact-title {
+    font-size: 1.3rem;
+    padding: 12px 22px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    justify-items: center;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+  }
+
+  .contact-text h4,
+  .contact-text p {
+    text-align: center;
+  }
+}

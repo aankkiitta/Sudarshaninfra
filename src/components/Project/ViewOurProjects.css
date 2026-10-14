@@ -1,0 +1,227 @@
+/* src/components/Project/ViewOurProjects.css */
+
+.vop-section {
+  width: 100%;
+  padding: 90px 20px;
+  background-color: #ffffff;
+}
+
+.vop-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   Header — Heading Left, View All Right
+   ========================================= */
+.vop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 50px;
+  gap: 20px;
+}
+
+.vop-header-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.vop-tag {
+  display: inline-block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #cba357;
+  margin-bottom: 12px;
+  padding-left: 22px;
+  position: relative;
+}
+
+.vop-tag::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 2px;
+  background-color: #cba357;
+}
+
+.vop-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+}
+
+.vop-title .highlight {
+  color: #7a1f1f;
+}
+
+/* View All Link */
+.vop-header-right {
+  padding-bottom: 10px;
+}
+
+.vop-view-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #7a1f1f;
+  padding-bottom: 4px;
+  border-bottom: 1.5px solid #7a1f1f;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.vop-view-all svg {
+  transition: transform 0.3s ease;
+}
+
+.vop-view-all:hover {
+  color: #cba357;
+  border-color: #cba357;
+  gap: 12px;
+}
+
+.vop-view-all:hover svg {
+  transform: translateX(4px);
+}
+
+/* =========================================
+   Slider
+   ========================================= */
+.vop-slider {
+  width: 100%;
+}
+
+.vop-grid {
+  width: 100%;
+  display: grid;
+  gap: 30px;
+}
+
+.vop-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.vop-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.vop-grid-1 {
+  grid-template-columns: 1fr;
+}
+
+/* =========================================
+   Arrows
+   ========================================= */
+.vop-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 45px;
+}
+
+.vop-arrow {
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border: 1.5px solid #e2e8f0;
+  color: #1e293b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+
+.vop-arrow svg {
+  width: 22px;
+  height: 22px;
+}
+
+.vop-arrow:hover:not(:disabled) {
+  background-color: #7a1f1f;
+  border-color: #7a1f1f;
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+.vop-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 992px) {
+  .vop-title {
+    font-size: 2rem;
+  }
+
+  .vop-grid {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .vop-section {
+    padding: 70px 16px;
+  }
+
+  .vop-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 35px;
+  }
+
+  .vop-header-right {
+    padding-bottom: 0;
+  }
+
+  .vop-title {
+    font-size: 1.7rem;
+  }
+
+  .vop-view-all {
+    font-size: 12px;
+  }
+
+  .vop-grid {
+    gap: 20px;
+  }
+
+  .vop-controls {
+    gap: 20px;
+    margin-top: 35px;
+  }
+
+  .vop-arrow {
+    width: 45px;
+    height: 45px;
+  }
+
+  .vop-arrow svg {
+    width: 18px;
+    height: 18px;
+  }
+}

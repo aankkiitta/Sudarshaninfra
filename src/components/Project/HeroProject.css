@@ -1,0 +1,147 @@
+/* src/components/Project/HeroProject.css */
+
+.hp-hero {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  min-height: 300px;
+  max-height: 420px;
+  background-color: #ffffff;        /* 👈 White Background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  border-bottom: 1px solid #ece8e1; /* Halki line neeche */
+}
+
+.hp-content {
+  max-width: 900px;
+  padding: 80px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Icon + Number */
+.hp-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.hp-number {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #cba357;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+/* Title */
+.hp-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1e293b;                    /* 👈 Dark text (white pe) */
+  margin: 0 0 12px;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+}
+
+/* Subtitle */
+.hp-sub {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #64748b;                    /* 👈 Grey text */
+  max-width: 650px;
+  margin: 0 auto 20px;
+}
+
+/* Breadcrumb */
+.hp-breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.hp-breadcrumb a {
+  color: #7a1f1f;                    /* Maroon links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 600;
+}
+
+.hp-breadcrumb a:hover {
+  color: #cba357;
+}
+
+.hp-sep {
+  color: #94a3b8;
+  font-size: 1rem;
+}
+
+.hp-current {
+  color: #1e293b;
+  font-weight: 700;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 768px) {
+  .hp-hero {
+    height: auto;
+    min-height: auto;
+    padding: 40px 0;
+  }
+
+  .hp-content {
+    padding: 40px 16px 20px;
+  }
+
+  .hp-number {
+    font-size: 1rem;
+  }
+
+  .hp-title {
+    font-size: 1.7rem;
+  }
+
+  .hp-sub {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+
+  .hp-breadcrumb {
+    font-size: 0.8rem;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hp-title {
+    font-size: 1.4rem;
+  }
+
+  .hp-sub {
+    font-size: 0.85rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .hp-breadcrumb {
+    font-size: 0.72rem;
+  }
+}

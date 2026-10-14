@@ -1,0 +1,51 @@
+/* src/components/ScrollReveal.css */
+
+.sr {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  transition-duration: 700ms;
+  will-change: opacity, transform;
+}
+
+/* ---------- Animations ---------- */
+
+/* Fade Up (from bottom) */
+.sr-fade-up {
+  transform: translateY(40px);
+}
+
+/* Fade Down (from top) */
+.sr-fade-down {
+  transform: translateY(-40px);
+}
+
+/* Fade Left (from left) */
+.sr-fade-left {
+  transform: translateX(-60px);
+}
+
+/* Fade Right (from right) */
+.sr-fade-right {
+  transform: translateX(60px);
+}
+
+/* Zoom In */
+.sr-zoom-in {
+  transform: scale(0.92);
+}
+
+/* Visible state */
+.sr-visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0) scale(1);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .sr {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}

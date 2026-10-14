@@ -1,0 +1,206 @@
+/* src/components/Project/OurExpertise.css */
+
+.our-expertise {
+  width: 100%;
+  padding: 100px 20px 80px;
+  background-color: #fdf5f2;
+  position: relative;
+}
+
+.our-expertise-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   Header
+   ========================================= */
+.our-expertise-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 70px;
+}
+
+.oe-tag {
+  display: inline-block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #cba357;
+  margin-bottom: 14px;
+  padding-left: 22px;
+  position: relative;
+}
+
+.oe-tag::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 2px;
+  background-color: #cba357;
+}
+
+.oe-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 16px;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+}
+
+.oe-desc {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #64748b;
+  margin: 0;
+}
+
+/* =========================================
+   Grid
+   ========================================= */
+.oe-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 55px 30px;
+  padding-top: 30px;    /* Icon ke top part ke liye space */
+}
+
+/* =========================================
+   ScrollReveal Wrapper
+   ========================================= */
+.oe-grid > .sr {
+  position: relative;
+  margin-top: 30px;     /* Icon overlap ke liye — yahan shift kiya */
+}
+
+/* =========================================
+   Card
+   ========================================= */
+.oe-card {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 55px 24px 30px;
+  text-align: center;
+  border: 1px solid #ece8e1;
+  transition: all 0.4s ease;
+  margin-top: 0;        /* 👈 30px → 0 (wrapper pe shift ho gaya) */
+  height: 100%;
+}
+
+.oe-card:hover {
+  transform: translateY(-6px);
+  border-color: #7a1f1f;
+  box-shadow: 0 15px 40px rgba(122, 31, 31, 0.1);
+}
+
+/* =========================================
+   Icon — Half Outside, Half Inside
+   ========================================= */
+.oe-icon-wrap {
+  position: absolute;
+  top: -30px;           /* 👈 Card ke top se 30px upar (half outside) */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.oe-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #7a1f1f;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(122, 31, 31, 0.25);
+  transition: all 0.3s ease;
+}
+
+.oe-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.oe-card:hover .oe-icon {
+  background-color: #cba357;
+  transform: scale(1.08) rotate(-6deg);
+  box-shadow: 0 12px 25px rgba(203, 163, 87, 0.4);
+}
+
+/* =========================================
+   Content
+   ========================================= */
+.oe-content {
+  padding-top: 5px;
+}
+
+.oe-card-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 10px;
+  line-height: 1.3;
+}
+
+.oe-card-desc {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 1024px) {
+  .oe-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 25px;
+  }
+}
+
+@media (max-width: 640px) {
+  .our-expertise {
+    padding: 80px 16px 60px;
+  }
+
+  .oe-title {
+    font-size: 1.7rem;
+  }
+
+  .oe-desc {
+    font-size: 0.9rem;
+  }
+
+  .oe-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding-top: 20px;
+  }
+
+  .oe-card {
+    padding: 50px 20px 26px;
+  }
+
+  .oe-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .oe-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+}

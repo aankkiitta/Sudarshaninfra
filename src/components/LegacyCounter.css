@@ -1,0 +1,199 @@
+/* src/components/LegacyCounter.css */
+
+.legacy-section {
+  width: 100%;
+  padding: 50px 20px 60px;
+  background-color: #fdf5f2;
+}
+
+.legacy-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   Top Heading
+   ========================================= */
+.legacy-heading {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1e293b;
+  text-align: center;
+  margin: 0 0 40px;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+}
+
+/* =========================================
+   Main Layout
+   ========================================= */
+.legacy-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+/* =========================================
+   LEFT: "22+ years of legacy"
+   ========================================= */
+.legacy-left {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 16px; /* 👈 Gap thoda badha */
+  flex-shrink: 0;
+}
+
+.legacy-number {
+  display: inline-block;
+  line-height: 1;
+}
+
+/* 👇 22+ ka size aur bada (13rem → 15rem) */
+.legacy-number span {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 15rem;
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+
+  background-image: url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* 👇 "years of legacy" ka size bada (1.4rem → 1.7rem) */
+.legacy-label {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #1e293b;
+  margin: 0 0 28px 0; /* 👈 Number ke saath align karne ke liye margin badha */
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+  white-space: nowrap;
+}
+
+/* =========================================
+   RIGHT: Stats
+   ========================================= */
+.legacy-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 1;
+  min-width: 0;
+
+  background-color: transparent;
+  
+  border-top: 1px solid #d4d4d4;
+  border-bottom: 1px solid #d4d4d4;
+  
+  padding: 25px 30px;
+  gap: 20px;
+}
+
+/* Each Stat */
+.legacy-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 6px;
+  flex: 0 0 auto;
+}
+
+/* Stat Number */
+.stat-number {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1e293b;
+  line-height: 1;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+/* Stat Label */
+.stat-label {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #64748b;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+/* Dividers hidden */
+.stat-divider {
+  display: none;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 1024px) {
+  .legacy-main { gap: 50px; }
+  .legacy-number span { font-size: 12rem; } /* 👈 10rem se 12rem */
+  .legacy-label { font-size: 1.4rem; margin-bottom: 22px; } /* 👈 Bada kiya */
+  
+  .legacy-right { padding: 20px 20px; gap: 15px; }
+  .stat-number { font-size: 1.9rem; }
+  .stat-label { font-size: 0.68rem; }
+}
+
+@media (max-width: 768px) {
+  .legacy-section { padding: 40px 16px 50px; }
+  .legacy-heading { font-size: 1.3rem; margin-bottom: 30px; }
+  
+  .legacy-main {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .legacy-left {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .legacy-number span { font-size: 9rem; } /* 👈 8rem se 9rem */
+  .legacy-label { font-size: 1.3rem; margin: 0; } /* 👈 Bada kiya */
+  
+  .legacy-right {
+    flex-wrap: wrap;
+    padding: 18px 12px;
+    width: 100%;
+    min-width: auto;
+    gap: 20px;
+    justify-content: space-around;
+  }
+  
+  .legacy-stat {
+    flex: 0 0 auto;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .stat-number { font-size: 1.6rem; }
+  .stat-label { font-size: 0.65rem; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .legacy-number span { font-size: 7rem; } /* 👈 6rem se 7rem */
+  .legacy-heading { font-size: 1.1rem; }
+  .legacy-label { font-size: 1.1rem; } /* 👈 Bada kiya */
+  .stat-number { font-size: 1.4rem; }
+  .stat-label { font-size: 0.6rem; letter-spacing: 0.5px; }
+}

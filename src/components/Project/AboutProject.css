@@ -1,0 +1,341 @@
+/* src/components/Project/AboutProject.css */
+
+.about-project {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  padding: 100px 0;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+/* =========================================
+   Background Image — Full Cover
+   ========================================= */
+.about-project::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../image/about.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* =========================================
+   Container — Full Width (No Left Gap)
+   ========================================= */
+.about-project-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding-right: 40px;
+  padding-left: 0;
+}
+
+/* =========================================
+   LEFT: Image — 15% Off-Screen, Dashed Border
+   ========================================= */
+.about-project-left {
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.about-project-image-wrap {
+  position: relative;
+  margin-left: -15%;
+  width: 115%;
+
+  border-top: 3px dashed #7a1f1f;
+  border-right: 3px dashed #7a1f1f;
+  border-bottom: 3px dashed #7a1f1f;
+  border-left: none;
+
+  border-radius: 0 12px 12px 0;
+  padding: 10px;
+  padding-left: 0;
+
+  background-color: transparent;
+  transition: all 0.4s ease;
+}
+
+.about-project-image-wrap:hover {
+  border-color: #cba357;
+}
+
+.about-project-image {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+  border-radius: 0 8px 8px 0;
+  transition: transform 0.5s ease;
+}
+
+.about-project-image-wrap:hover .about-project-image {
+  transform: scale(1.03);
+}
+
+/* =========================================
+   RIGHT: Content
+   ========================================= */
+.about-project-right {
+  padding-right: 60px;
+  padding-left: 20px;
+}
+
+.about-project-tag {
+  display: inline-block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #cba357;
+  margin-bottom: 18px;
+  padding-left: 22px;
+  position: relative;
+}
+
+.about-project-tag::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 2px;
+  background-color: #cba357;
+}
+
+.about-project-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.25;
+  margin: 0 0 22px;
+  letter-spacing: -0.3px;
+}
+
+.about-project-title .highlight {
+  color: #7a1f1f;
+}
+
+.about-project-desc {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #64748b;
+  margin: 0 0 16px;
+}
+
+/* =========================================
+   Features List — Simple 2-Column
+   ========================================= */
+.about-project-features {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 30px;
+  padding: 0;
+  margin: 30px 0 0;
+}
+
+.about-project-features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e293b;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  transition: none;
+}
+
+.about-project-features li:hover {
+  transform: none;
+  background: none;
+  border: none;
+}
+
+.about-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #1f3d22;               /* Dark Green */
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+/* =========================================
+   TABLET (max-width: 992px)
+   ========================================= */
+@media (max-width: 992px) {
+  .about-project {
+    padding: 70px 0;
+    min-height: auto;
+  }
+
+  .about-project-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-right: 16px;
+    padding-left: 0;
+  }
+
+  .about-project-image-wrap {
+    margin-left: -15%;
+    width: 115%;
+    border-radius: 0 12px 12px 0;
+    padding: 8px;
+    padding-left: 0;
+  }
+
+  .about-project-image {
+    height: 380px;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .about-project-right {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+
+/* =========================================
+   MOBILE (max-width: 640px)
+   ========================================= */
+@media (max-width: 640px) {
+  .about-project {
+    padding: 55px 0;
+  }
+
+  .about-project-container {
+    gap: 30px;
+    padding-right: 16px;
+    padding-left: 0;
+  }
+
+  .about-project-image-wrap {
+    margin-left: -15%;
+    width: 115%;
+    border-radius: 0 10px 10px 0;
+    padding: 6px;
+    padding-left: 0;
+  }
+
+  .about-project-image {
+    height: 280px;
+    border-radius: 0 6px 6px 0;
+  }
+
+  .about-project-right {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .about-project-tag {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    margin-bottom: 14px;
+  }
+
+  .about-project-title {
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+  }
+
+  .about-project-desc {
+    font-size: 0.9rem;
+    line-height: 1.75;
+  }
+
+  /* Single column on mobile */
+  .about-project-features {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 22px;
+  }
+
+  .about-project-features li {
+    font-size: 0.9rem;
+    gap: 10px;
+  }
+
+  .about-check {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE (max-width: 400px)
+   ========================================= */
+@media (max-width: 400px) {
+  .about-project-image {
+    height: 220px;
+  }
+
+  .about-project-title {
+    font-size: 1.4rem;
+  }
+
+  .about-project-desc {
+    font-size: 0.85rem;
+  }
+
+  .about-project-features li {
+    font-size: 0.85rem;
+  }
+}
+
+
+
+
+
+/* ScrollReveal wrapper inside features list */
+.about-project-features > .sr {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+@media (max-width: 640px) {
+  .about-project-features > .sr {
+    font-size: 0.9rem;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .about-project-features > .sr {
+    font-size: 0.85rem;
+  }
+}

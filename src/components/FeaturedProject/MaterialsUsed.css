@@ -1,0 +1,188 @@
+/* src/components/FeaturedProject/MaterialsUsed.css */
+
+.mu-section {
+  padding: 80px 0;
+  background: #fafafa;
+}
+
+.mu-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Header ---------- */
+.mu-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.mu-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #b8860b;
+  background: rgba(184, 134, 11, 0.08);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.mu-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+}
+
+.mu-desc {
+  font-size: 15px;
+  color: #666;
+  margin: 0;
+  max-width: 520px;
+  margin-inline: auto;
+}
+
+/* ---------- Slider ---------- */
+.mu-slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.mu-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 8px 4px 24px;
+}
+
+.mu-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---------- Card (no box) ---------- */
+.mu-card {
+  flex: 0 0 auto;
+  width: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px 8px;
+  background: transparent;
+  border: none;
+  transition: transform 0.3s ease;
+  user-select: none;
+}
+
+.mu-card:hover {
+  transform: translateY(-4px);
+}
+
+.mu-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  color: #111;
+}
+
+.mu-category {
+  font-size: 13px;
+  font-weight: 500;
+  color: #9a9a9a;
+  margin-bottom: 6px;
+  letter-spacing: 0.01em;
+}
+
+.mu-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.3;
+}
+
+/* ---------- Arrows BELOW slider, centered ---------- */
+.mu-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;                /* space between < and > */
+  margin-top: 24px;
+}
+
+.mu-arrow {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: #1a2332;           /* dark navy/black */
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.mu-arrow:hover {
+  color: #b8860b;
+  transform: scale(1.15);
+}
+
+.mu-arrow:active {
+  transform: scale(0.95);
+}
+
+.mu-arrow svg {
+  display: block;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .mu-card { width: 170px; }
+}
+
+@media (max-width: 768px) {
+  .mu-section { padding: 60px 0; }
+  .mu-title { font-size: 26px; }
+
+  .mu-card {
+    width: 150px;
+    padding: 12px 6px;
+  }
+
+  .mu-icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 14px;
+  }
+
+  .mu-name { font-size: 14px; }
+  .mu-category { font-size: 12px; }
+
+  .mu-controls { gap: 40px; margin-top: 18px; }
+
+  .mu-arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .mu-arrow svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mu-card { width: 140px; }
+  .mu-controls { gap: 30px; }
+}

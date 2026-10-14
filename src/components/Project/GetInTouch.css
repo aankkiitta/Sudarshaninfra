@@ -1,0 +1,182 @@
+/* src/components/Project/GetInTouch.css */
+
+.git-section {
+  width: 100%;
+  padding: 100px 20px 120px;         /* 👈 Zyada padding */
+  background-color: #ffffff;
+  position: relative;
+}
+
+.git-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* =========================================
+   Tag — "GET IN TOUCH"
+   ========================================= */
+.git-tag {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #7a1f1f;
+  margin-bottom: 24px;               /* 👈 Zyada gap niche */
+  display: inline-block;
+}
+
+/* =========================================
+   Title — "Want more information?"
+   ========================================= */
+.git-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 22px;                  /* 👈 Zyada gap niche */
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+/* =========================================
+   Description
+   ========================================= */
+.git-desc {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #64748b;
+  margin: 0 0 50px;                  /* 👈 Zyada gap button se pehle */
+  max-width: 700px;
+}
+
+/* =========================================
+   Button
+   ========================================= */
+.git-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 18px 45px;                /* 👈 Bada button */
+  background-color: #7a1f1f;
+  color: #ffffff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.git-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.git-btn:hover {
+  background-color: #5f1414;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(122, 31, 31, 0.3);
+}
+
+.git-btn:hover svg {
+  transform: rotate(-15deg) scale(1.15);
+}
+
+.git-btn:active {
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 768px) {
+  .git-section {
+    padding: 70px 20px 80px;
+  }
+
+  .git-tag {
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+  }
+
+  .git-title {
+    font-size: 2rem;
+    margin-bottom: 18px;
+  }
+
+  .git-desc {
+    font-size: 0.95rem;
+    margin-bottom: 40px;
+    max-width: 100%;
+  }
+
+  .git-btn {
+    padding: 16px 36px;
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .git-section {
+    padding: 60px 16px 70px;
+  }
+
+  .git-tag {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    margin-bottom: 16px;
+  }
+
+  .git-title {
+    font-size: 1.6rem;
+    margin-bottom: 14px;
+    letter-spacing: -0.3px;
+  }
+
+  .git-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 32px;
+  }
+
+  .git-btn {
+    width: 100%;
+    max-width: 320px;
+    padding: 15px 24px;
+    font-size: 0.85rem;
+    gap: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+/* ============================================================================
+   ██  SCROLLREVEAL WRAPPER FIX
+   ============================================================================ */
+.git-container > .sr {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.git-container > .sr .git-tag,
+.git-container > .sr .git-title,
+.git-container > .sr .git-desc,
+.git-container > .sr .git-btn {
+  margin-left: auto;
+  margin-right: auto;
+}

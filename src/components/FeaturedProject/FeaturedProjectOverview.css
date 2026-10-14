@@ -1,0 +1,203 @@
+/* src/components/FeaturedProject/FeaturedProjectOverview.css */
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+.fp-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.fp-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.fp-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.3) 0%,
+    rgba(15, 23, 42, 0.5) 40%,
+    rgba(15, 23, 42, 0.85) 100%
+  );
+  z-index: 1;
+}
+
+.fp-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 60px 80px;
+  color: #ffffff;
+}
+
+/* Breadcrumb */
+.fp-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.fp-breadcrumb a {
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.fp-breadcrumb a:hover {
+  color: #cba357;
+}
+
+.fp-sep {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.fp-current {
+  color: #cba357;
+}
+
+/* Featured Badge */
+.fp-featured-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background-color: #16a34a;
+  color: #ffffff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+/* Title */
+.fp-hero-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 4rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 25px;
+  line-height: 1.05;
+  letter-spacing: -1px;
+}
+
+/* Meta Info */
+.fp-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  align-items: center;
+}
+
+.fp-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.fp-meta-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  color: #4ade80;
+  flex-shrink: 0;
+}
+
+.fp-meta-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 992px) {
+  .fp-hero-content {
+    padding: 0 30px 60px;
+  }
+
+  .fp-hero-title {
+    font-size: 2.8rem;
+  }
+
+  .fp-hero-meta {
+    gap: 20px;
+  }
+
+  .fp-meta-item {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .fp-hero {
+    height: 85vh;
+    min-height: 500px;
+  }
+
+  .fp-hero-content {
+    padding: 0 20px 50px;
+  }
+
+  .fp-breadcrumb {
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  .fp-featured-badge {
+    font-size: 0.65rem;
+    padding: 6px 14px;
+    margin-bottom: 16px;
+  }
+
+  .fp-hero-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .fp-hero-meta {
+    gap: 14px 24px;
+  }
+
+  .fp-meta-item {
+    font-size: 0.78rem;
+    gap: 8px;
+  }
+
+  .fp-meta-icon {
+    width: 14px;
+    height: 14px;
+  }
+}

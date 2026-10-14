@@ -1,0 +1,293 @@
+/* src/components/Project/WhatsIncluded.css */
+
+.wi-section {
+  width: 100%;
+  padding: 80px 20px;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+}
+
+.wi-container {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+}
+
+/* Header */
+.wi-header {
+  text-align: center;
+  max-width: 650px;
+}
+
+.wi-tag {
+  display: inline-block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #cba357;
+  margin-bottom: 14px;
+  padding-left: 22px;
+  position: relative;
+}
+
+.wi-tag::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 2px;
+  background-color: #cba357;
+}
+
+.wi-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 14px;
+  line-height: 1.2;
+}
+
+.wi-desc {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Slider */
+.wi-slider {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.wi-items {
+  width: 100%;
+  display: grid;
+  gap: 16px;
+}
+
+.wi-items-5 {
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 1300px;
+}
+
+.wi-items-3 {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 900px;
+}
+
+.wi-items-2 {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 600px;
+}
+
+/* Card */
+.wi-card {
+  position: relative;
+  background-color: #ffffff;
+  padding: 22px 14px;
+  height: 150px;                /* 👈 Thoda badha (140 → 150) */
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 
+    0 2px 6px rgba(0, 0, 0, 0.04),
+    0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: 
+    background-color 0.35s ease, 
+    box-shadow 0.35s ease;
+  animation: wiFadeIn 0.4s ease;
+  cursor: pointer;
+}
+
+.wi-card:hover {
+  background-color: #4a5568;
+  box-shadow: 
+    0 4px 10px rgba(0, 0, 0, 0.08),
+    0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Corner Brackets */
+.wi-corner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  transition: border-color 0.35s ease;
+  pointer-events: none;
+}
+
+.wi-corner-tl {
+  top: -3px;
+  left: -3px;
+  border-top: 3px solid #0f172a;
+  border-left: 3px solid #0f172a;
+}
+
+.wi-corner-br {
+  bottom: -3px;
+  right: -3px;
+  border-bottom: 3px solid #0f172a;
+  border-right: 3px solid #0f172a;
+}
+
+.wi-card:hover .wi-corner-tl,
+.wi-card:hover .wi-corner-br {
+  border-color: #ffffff;
+}
+
+/* 👇 Text — Bigger & Bolder */
+.wi-item-text {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;              /* 0.8rem → 1rem */
+  font-weight: 700;             /* 500 → 700 */
+  color: #1e293b;               /* Darker */
+  letter-spacing: -0.2px;
+  line-height: 1.4;
+  text-align: center;
+  margin: 0;
+  transition: color 0.35s ease;
+}
+
+.wi-card:hover .wi-item-text {
+  color: #ffffff;
+}
+
+/* Fade Animation */
+@keyframes wiFadeIn {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Arrows */
+.wi-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.wi-arrow {
+  width: 42px;
+  height: 42px;
+  background: transparent;
+  border: 1px solid #e2e8f0;
+  color: #1e293b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.wi-arrow svg {
+  width: 22px;
+  height: 22px;
+}
+
+.wi-arrow:hover {
+  background-color: #7a1f1f;
+  border-color: #7a1f1f;
+  color: #ffffff;
+}
+
+.wi-arrow:active {
+  transform: scale(0.95);
+}
+
+/* =========================================
+   TABLET (max-width: 992px) — 3 Cards
+   ========================================= */
+@media (max-width: 992px) {
+  .wi-title {
+    font-size: 2rem;
+  }
+
+  .wi-items-5 {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 800px;
+  }
+
+  .wi-item-text {
+    font-size: 0.95rem;
+    font-weight: 700;
+  }
+
+  .wi-card {
+    height: 145px;
+    min-height: 145px;
+  }
+}
+
+/* =========================================
+   MOBILE (max-width: 640px) — 2 Cards
+   ========================================= */
+@media (max-width: 640px) {
+  .wi-section {
+    padding: 60px 16px;
+  }
+
+  .wi-container {
+    gap: 35px;
+  }
+
+  .wi-title {
+    font-size: 1.6rem;
+  }
+
+  .wi-desc {
+    font-size: 0.9rem;
+  }
+
+  .wi-items-2 {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+    gap: 12px;
+  }
+
+  .wi-card {
+    height: 130px;
+    min-height: 130px;
+    padding: 18px 10px;
+  }
+
+  .wi-item-text {
+    font-size: 0.9rem;         /* 0.75rem → 0.9rem */
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .wi-corner {
+    width: 16px;
+    height: 16px;
+  }
+
+  .wi-controls {
+    gap: 30px;
+  }
+
+  .wi-arrow {
+    width: 38px;
+    height: 38px;
+  }
+
+  .wi-arrow svg {
+    width: 20px;
+    height: 20px;
+  }
+}

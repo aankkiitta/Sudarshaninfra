@@ -1,0 +1,82 @@
+/* src/index.css */
+
+:root {
+  /* Colors */
+  --text: #4b5563;
+  --text-h: #111827;
+  --bg: #ffffff;
+  --border: #e5e7eb;
+  
+  /* Fonts */
+  --sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+
+  /* Base Styles */
+  font: 16px/1.5 var(--sans);
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg);
+}
+
+/* Root layout */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Base Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading);
+  color: var(--text-h);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================================
+   GLOBAL SECTIONS (Pehle App.css mein tha)
+   ========================================= */
+
+.content-section {
+  width: 100%;
+  min-height: 80vh;
+  padding: 100px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #f8fafc; /* Halka grey background */
+}
+
+.content-section h2 {
+  font-size: 2.5rem;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.content-section p {
+  font-size: 1.1rem;
+  color: #6b7280;
+  max-width: 600px;
+}

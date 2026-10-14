@@ -1,0 +1,229 @@
+/* src/components/Services.css */
+
+.services-section {
+  width: 100%;
+  padding: 90px 20px;
+  background-color: #ffffff;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ---------- Header ---------- */
+.services-header {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-eyebrow {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #7a1f1f;
+  margin-bottom: 12px;
+}
+
+.services-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.services-desc {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #64748b;
+  margin: 0;
+}
+
+/* ============================================================================
+   ██  GRID
+   ============================================================================ */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+/* ============================================================================
+   ██  SCROLLREVEAL WRAPPER FIX
+   ============================================================================ */
+.services-grid > .sr {
+  display: flex;
+  height: 100%;
+}
+
+.services-grid > .sr .service-card {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+}
+
+/* ============================================================================
+   ██  CARD (Cream Background + Red Text + Hover Image)
+   ============================================================================ */
+.service-card {
+  position: relative;
+  min-height: 280px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fdf5f2;
+  border: 1px solid #ece8e1;
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(122, 31, 31, 0.15);
+}
+
+/* Background Image (Default Hidden) */
+.service-card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.1);
+  transition: opacity 0.45s ease, transform 0.6s ease;
+  z-index: 0;
+}
+
+/* Dark Overlay (Hover par image ke upar) */
+.service-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(122, 31, 31, 0.75) 0%, rgba(15, 23, 42, 0.85) 100%);
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  z-index: 1;
+}
+
+/* Hover Effect - Image Show Karein */
+.service-card:hover .service-card-bg {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.service-card:hover .service-card-overlay {
+  opacity: 1;
+}
+
+/* ---------- Card Content ---------- */
+.service-card-inner {
+  position: relative;
+  z-index: 2;
+  padding: 35px 30px 30px;
+  height: 100%;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Big Number (01, 02, etc.) */
+.service-num {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  color: #7a1f1f;
+  opacity: 0.25;
+  line-height: 1;
+  margin-bottom: 15px;
+  transition: color 0.4s ease, opacity 0.4s ease;
+}
+
+.service-card:hover .service-num {
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+/* Title */
+.service-card-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #7a1f1f;
+  margin-bottom: 12px;
+  transition: color 0.4s ease;
+}
+
+.service-card:hover .service-card-title {
+  color: #ffffff;
+}
+
+/* Description */
+.service-card-desc {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  transition: color 0.4s ease;
+}
+
+.service-card:hover .service-card-desc {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ---------- Know More Link ---------- */
+.service-know-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #7a1f1f;
+  padding: 0 0 5px 0;
+  border-bottom: 1.5px solid #7a1f1f;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: color 0.4s ease, border-color 0.4s ease, letter-spacing 0.3s ease;
+}
+
+.service-know-more:hover {
+  letter-spacing: 2px;
+}
+
+.service-card:hover .service-know-more {
+  color: #ffffff;
+  border-color: #ffffff;
+  letter-spacing: 2px;
+}
+
+/* ============================================================================
+   ██  RESPONSIVE
+   ============================================================================ */
+@media (max-width: 1024px) {
+  .services-title { font-size: 2rem; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); gap: 22px; }
+}
+
+@media (max-width: 640px) {
+  .services-section { padding: 60px 16px; }
+  .services-title { font-size: 1.8rem; }
+  .services-grid { grid-template-columns: 1fr; gap: 20px; }
+
+  .service-card,
+  .service-card-inner { min-height: 240px; }
+  .service-num { font-size: 36px; }
+  .service-card-title { font-size: 1.15rem; }
+  .service-card-inner { padding: 28px 22px 24px; }
+}

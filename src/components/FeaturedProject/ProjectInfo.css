@@ -1,0 +1,176 @@
+/* src/components/FeaturedProject/ProjectInfo.css */
+
+.pi-section {
+  width: 100%;
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+.pi-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;         /* Left small, Right bigger */
+  gap: 80px;
+  align-items: center;
+}
+
+/* =========================================
+   LEFT SIDE — Tag + Heading + Description
+   ========================================= */
+.pi-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.pi-tag {
+  display: inline-block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #cba357;
+  margin-bottom: 14px;
+  padding-left: 22px;
+  position: relative;
+  width: fit-content;
+}
+
+.pi-tag::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 2px;
+  background-color: #cba357;
+}
+
+.pi-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 18px;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+}
+
+.pi-desc {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #64748b;
+  margin: 0;
+  max-width: 420px;
+}
+
+/* =========================================
+   RIGHT SIDE — Table Box
+   ========================================= */
+.pi-right {
+  width: 100%;
+}
+
+.pi-table {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #ece6dc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.pi-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-items: center;
+  border-bottom: 1px solid #f0ebe3;
+  transition: background-color 0.3s ease;
+}
+
+.pi-row:last-child {
+  border-bottom: none;
+}
+
+.pi-row:hover {
+  background-color: #fdf9f5;
+}
+
+.pi-label {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1e293b;
+  padding: 16px 22px;
+  border-right: 1px solid #f0ebe3;
+}
+
+.pi-value {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #64748b;
+  padding: 16px 22px;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 992px) {
+  .pi-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .pi-left {
+    text-align: center;
+    align-items: center;
+  }
+
+  .pi-desc {
+    max-width: 100%;
+  }
+
+  .pi-title {
+    font-size: 2rem;
+  }
+
+  .pi-tag {
+    padding-left: 20px;
+  }
+
+  .pi-tag::before {
+    width: 12px;
+    height: 2px;
+  }
+}
+
+@media (max-width: 640px) {
+  .pi-section {
+    padding: 60px 16px;
+  }
+
+  .pi-title {
+    font-size: 1.5rem;
+  }
+
+  .pi-desc {
+    font-size: 0.88rem;
+  }
+
+  .pi-row {
+    grid-template-columns: 120px 1fr;
+  }
+
+  .pi-label {
+    font-size: 0.82rem;
+    padding: 14px 16px;
+  }
+
+  .pi-value {
+    font-size: 0.85rem;
+    padding: 14px 16px;
+  }
+}

@@ -1,0 +1,295 @@
+/* src/components/FeaturedProject/SimilarProjects.css */
+
+.sp-section {
+  width: 100%;
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+.sp-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   Header — Desktop: Left | Mobile: Center
+   ========================================= */
+.sp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 45px;
+  gap: 20px;
+}
+
+.sp-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+}
+
+.sp-view-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #7a1f1f;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.sp-view-more svg {
+  transition: transform 0.3s ease;
+}
+
+.sp-view-more:hover {
+  color: #cba357;
+  gap: 12px;
+}
+
+.sp-view-more:hover svg {
+  transform: translateX(4px);
+}
+
+.desktop-only { display: inline-flex; }
+.mobile-only { display: none; }
+
+.sp-view-more-wrap {
+  justify-content: center;
+  margin-top: 35px;
+}
+
+/* =========================================
+   Slider Wrapper
+   ========================================= */
+.sp-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.sp-arrow {
+  display: none;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  color: #1e293b;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.sp-arrow svg {
+  width: 28px;
+  height: 28px;
+}
+
+.sp-arrow:hover:not(:disabled) {
+  color: #7a1f1f;
+  transform: scale(1.15);
+}
+
+.sp-arrow:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   Cards Grid
+   ========================================= */
+.sp-grid {
+  flex: 1;
+  display: grid;
+  gap: 30px;
+}
+
+.sp-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.sp-grid-2 { grid-template-columns: repeat(2, 1fr); }
+.sp-grid-1 { grid-template-columns: 1fr; }
+
+/* =========================================
+   TABLET
+   ========================================= */
+@media (max-width: 992px) {
+  .sp-title { font-size: 2rem; }
+}
+
+/* =========================================
+   MOBILE — Center Heading + Short Card
+   ========================================= */
+@media (max-width: 768px) {
+  .sp-section { 
+    padding: 50px 0;
+  }
+
+  .sp-container {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  /* Header — CENTER */
+  .sp-header {
+    flex-direction: column;
+    align-items: center;                  /* 👈 Center */
+    text-align: center;                   /* 👈 Center */
+    margin-bottom: 24px;
+    padding: 0 20px;
+  }
+
+  .sp-title { 
+    font-size: 1.7rem; 
+  }
+
+  .desktop-only { display: none; }
+  .mobile-only { display: flex; }
+
+  /* Slider */
+  .sp-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 0 12px;
+  }
+
+  /* Arrows */
+  .sp-arrow {
+    display: flex;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: none;
+    color: #1e293b;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: all 0.3s ease;
+    position: relative;
+    transform: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .sp-arrow-left { left: auto; }
+  .sp-arrow-right { right: auto; }
+
+  .sp-arrow:hover:not(:disabled) {
+    color: #7a1f1f;
+    transform: scale(1.15);
+  }
+
+  .sp-arrow:disabled {
+    opacity: 0.25;
+  }
+
+  .sp-arrow svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Grid */
+  .sp-grid {
+    flex: 1;
+    width: auto;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sp-grid-1 {
+    grid-template-columns: 1fr;
+  }
+
+  /* 👇 Portfolio Card — SHORT HEIGHT */
+  .sp-grid .pc-card {
+    width: 100% !important;
+    height: 320px !important;             /* 👈 440px → 320px */
+    border-radius: 12px !important;
+    margin: 0 !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  /* Card Content */
+  .sp-grid .pc-content {
+    padding: 0 20px 24px;
+  }
+
+  .sp-grid .pc-title {
+    font-size: 1.4rem;
+  }
+
+  .sp-grid .pc-desc {
+    font-size: 0.82rem;
+    margin: 10px 0 14px;
+  }
+
+  .sp-grid .pc-btn {
+    padding: 10px 20px;
+    font-size: 11px;
+  }
+
+  /* Tag */
+  .sp-grid .pc-tag {
+    top: 14px;
+    left: 14px;
+    font-size: 9px;
+    padding: 6px 12px;
+  }
+
+  /* View More — Center */
+  .sp-view-more-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sp-title { 
+    font-size: 1.5rem; 
+  }
+
+  .sp-slider {
+    padding: 0 8px;
+    gap: 6px;
+  }
+
+  .sp-arrow {
+    width: 28px;
+    height: 28px;
+  }
+
+  .sp-arrow svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Card even shorter */
+  .sp-grid .pc-card {
+    height: 300px !important;
+  }
+
+  .sp-grid .pc-title {
+    font-size: 1.3rem;
+  }
+
+  .sp-grid .pc-desc {
+    font-size: 0.78rem;
+  }
+}

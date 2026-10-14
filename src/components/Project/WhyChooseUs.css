@@ -1,0 +1,316 @@
+/* src/components/Project/WhyChooseUs.css */
+
+.wcu-section {
+  width: 100%;
+  padding: 80px 0;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.wcu-wrapper {
+  width: 100%;
+}
+
+/* =========================================
+   Header
+   ========================================= */
+.wcu-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+}
+
+.wcu-tag {
+  display: inline-block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #cba357;
+  margin-bottom: 14px;
+  padding-left: 22px;
+  position: relative;
+}
+
+.wcu-tag::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 2px;
+  background-color: #cba357;
+}
+
+.wcu-main-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 14px;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+}
+
+.wcu-main-desc {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #64748b;
+  margin: 0;
+}
+
+/* =========================================
+   Slider
+   ========================================= */
+.wcu-slider {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: center;
+  min-height: 500px;
+}
+
+/* =========================================
+   LEFT: Image — 20% Hidden from Left
+   ========================================= */
+.wcu-left {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.wcu-image {
+  width: 120%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  margin-left: -20%;
+  animation: wcuFadeIn 0.6s ease;
+}
+
+@keyframes wcuFadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* =========================================
+   RIGHT: Content
+   ========================================= */
+.wcu-right {
+  padding: 40px 60px 40px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wcu-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 25px;
+  color: #7a1f1f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wcu-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.wcu-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #7a1f1f;
+  line-height: 1.25;
+  margin: 0 0 20px;
+  letter-spacing: -0.3px;
+}
+
+.wcu-desc {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #64748b;
+  margin: 0 0 45px;
+  max-width: 480px;
+}
+
+.wcu-controls {
+  display: flex;
+  gap: 12px;
+}
+
+.wcu-arrow {
+  width: 50px;
+  height: 50px;
+  border-radius: 0;
+  background: transparent;
+  border: 1px solid #e2e8f0;
+  color: #64748b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.wcu-arrow svg {
+  width: 18px;
+  height: 18px;
+}
+
+.wcu-arrow:hover {
+  background-color: #7a1f1f;
+  border-color: #7a1f1f;
+  color: #ffffff;
+}
+
+.wcu-arrow:active {
+  transform: scale(0.96);
+}
+
+/* =========================================
+   TABLET (max-width: 992px)
+   ========================================= */
+@media (max-width: 992px) {
+  .wcu-section {
+    padding: 60px 0;
+  }
+
+  .wcu-header {
+    margin-bottom: 40px;
+  }
+
+  .wcu-main-title {
+    font-size: 1.9rem;
+  }
+
+  .wcu-main-desc {
+    font-size: 0.92rem;
+  }
+
+  .wcu-slider {
+    grid-template-columns: 1fr;
+    gap: 0;
+    min-height: auto;
+  }
+
+  .wcu-image {
+    width: 120%;
+    height: 380px;
+    margin-left: -20%;
+  }
+
+  .wcu-right {
+    padding: 50px 30px 30px;
+  }
+
+  .wcu-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* =========================================
+   MOBILE (max-width: 640px)
+   ========================================= */
+@media (max-width: 640px) {
+  .wcu-section {
+    padding: 50px 0;
+  }
+
+  /* Header */
+  .wcu-header {
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+
+  .wcu-tag {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    margin-bottom: 12px;
+  }
+
+  .wcu-main-title {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+
+  .wcu-main-desc {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  /* Slider */
+  .wcu-slider {
+    grid-template-columns: 1fr;
+    gap: 0;
+    min-height: auto;
+  }
+
+  /* 👇 Image — 20% left white space */
+  .wcu-left {
+    width: 100%;
+    overflow: hidden;
+    padding-left: 20%;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    display: block;
+  }
+
+  .wcu-image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    margin-left: 0;
+    display: block;
+  }
+
+  /* Content */
+  .wcu-right {
+    padding: 40px 24px 20px 24px;
+  }
+
+  .wcu-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 20px;
+  }
+
+  .wcu-title {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    line-height: 1.25;
+  }
+
+  .wcu-desc {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    max-width: 100%;
+  }
+
+  .wcu-controls {
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .wcu-arrow {
+    width: 46px;
+    height: 46px;
+  }
+
+  .wcu-arrow svg {
+    width: 18px;
+    height: 18px;
+  }
+}

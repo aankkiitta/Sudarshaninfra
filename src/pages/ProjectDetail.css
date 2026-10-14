@@ -1,0 +1,57 @@
+/* src/pages/ProjectDetail.css */
+
+.pd-page {
+  width: 100%;
+  background: #ffffff;
+}
+
+.pd-back-wrap {
+  text-align: center;
+  padding: 40px 20px 80px;
+}
+
+.pd-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: #7a1f1f;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.pd-back-btn:hover {
+  background: #5f1414;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(122, 31, 31, 0.3);
+}
+
+.pd-not-found {
+  text-align: center;
+  padding: 120px 20px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.pd-not-found h2 {
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+.pd-not-found a {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #7a1f1f;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  margin-top: 20px;
+}

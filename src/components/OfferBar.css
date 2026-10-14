@@ -1,0 +1,68 @@
+/* src/components/OfferBar.css */
+
+.offer-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #b91c1c; /* Deep Red background */
+  color: #ffffff;
+  overflow: hidden;
+  padding: 12px 0;
+  z-index: 999; /* Header ke neeche rahega */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Scrolling Container */
+.marquee-container {
+  display: flex;
+  width: max-content;
+  animation: scrollMarquee 25s linear infinite;
+}
+
+/* Scrolling Animation */
+@keyframes scrollMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Aadha scroll karke reset */
+  }
+}
+
+/* Har Offer Item */
+.marquee-item {
+  display: flex;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  padding: 0 20px;
+}
+
+/* Diamond Icon */
+.diamond {
+  color: #ffffff;
+  font-size: 10px;
+  margin-right: 10px;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+  .offer-bar {
+    padding: 10px 0;
+  }
+  
+  .marquee-item {
+    font-size: 11px; /* Mobile par text chhota */
+    padding: 0 15px;
+  }
+  
+  .diamond {
+    font-size: 8px;
+    margin-right: 8px;
+  }
+}
