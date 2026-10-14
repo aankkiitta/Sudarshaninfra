@@ -66,9 +66,7 @@ const ServiceDetail = () => {
       {/* 5. WORKING PROCESS */}
       <WorkingProcess />
 
-      {/* 6. WHY CHOOSE US */}
-      <WhyChooseUs />
-
+      
       {/* 7. FAQ */}
       {service.faqs && (
         <FAQ faqs={service.faqs} />

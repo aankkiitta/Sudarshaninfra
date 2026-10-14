@@ -56,7 +56,7 @@ const Contact = () => {
               </div>
               <div className="contact-text">
                 <h4>Address</h4>
-                <p>202 Shivam Residency, Dombivli, Maharashtra</p>
+                <p> Dombivli, Maharashtra</p>
               </div>
             </div>
           </ScrollReveal>

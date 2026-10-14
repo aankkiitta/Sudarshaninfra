@@ -9,6 +9,7 @@ import Testimonials from '../components/Testimonials';
 import QuickEnquiry from '../components/QuickEnquiry';
 import Contact from '../components/Contact';
 import WorkingProcess from '../components/Project/WorkingProcess';
+import WhyChooseUs from '../components/Project/WhyChooseUs';
 const Home = () => {
   return (
     <>
@@ -18,7 +19,7 @@ const Home = () => {
         <WorkingProcess/>
       <About />
       <LegacyCounter />
-    
+    <WhyChooseUs/>
       <Testimonials />
        <Contact />
       <QuickEnquiry />
