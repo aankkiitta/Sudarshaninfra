@@ -159,13 +159,16 @@
 }
 
 @media (max-width: 640px) {
+  /* 👇 Full screen with header offset */
   .fp-hero {
-    height: 85vh;
-    min-height: 500px;
+    height: 100vh;                     /* 👈 85vh → 100vh */
+    min-height: 100vh;
+    max-height: 100vh;
+    padding-top: 0;
   }
 
   .fp-hero-content {
-    padding: 0 20px 50px;
+    padding: 0 20px 60px;              /* 👈 bottom padding thoda badhaya */
   }
 
   .fp-breadcrumb {
@@ -199,5 +202,16 @@
   .fp-meta-icon {
     width: 14px;
     height: 14px;
+  }
+}
+
+/* Extra small */
+@media (max-width: 400px) {
+  .fp-hero-title {
+    font-size: 1.6rem;
+  }
+
+  .fp-hero-content {
+    padding: 0 16px 50px;
   }
 }
