@@ -6,7 +6,7 @@
   --text-h: #111827;
   --bg: #ffffff;
   --border: #e5e7eb;
-  
+
   /* Fonts */
   --sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
@@ -26,9 +26,16 @@
   padding: 0;
 }
 
+/* 👇 ADD — fix right side white line */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;         /* 🔥 Ye hi fix hai */
+}
+
 body {
   margin: 0;
-  width: 100%;
   min-height: 100vh;
   background-color: var(--bg);
 }
@@ -39,6 +46,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;         /* 🔥 Extra safety */
 }
 
 /* Base Typography */
@@ -53,9 +61,8 @@ a {
 }
 
 /* =========================================
-   GLOBAL SECTIONS (Pehle App.css mein tha)
+   GLOBAL SECTIONS
    ========================================= */
-
 .content-section {
   width: 100%;
   min-height: 80vh;
@@ -66,7 +73,7 @@ a {
   align-items: center;
   text-align: center;
   border-bottom: 1px solid #e5e7eb;
-  background-color: #f8fafc; /* Halka grey background */
+  background-color: #f8fafc;
 }
 
 .content-section h2 {
