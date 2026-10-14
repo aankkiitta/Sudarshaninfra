@@ -16,9 +16,6 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
 }
 
-/* =========================================
-   Background Image
-   ========================================= */
 .pc-bg {
   position: absolute;
   inset: 0;
@@ -32,9 +29,6 @@
   transform: scale(1.06);
 }
 
-/* =========================================
-   Dark Overlay (Sirf Hover par)
-   ========================================= */
 .pc-overlay {
   position: absolute;
   inset: 0;
@@ -46,40 +40,30 @@
   );
   opacity: 0;
   z-index: 1;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease, background 0.4s ease;
 }
 
 .pc-card:hover .pc-overlay {
   opacity: 1;
 }
 
-/* =========================================
-   Top Left Tag (Dark Green Pill)
-   ========================================= */
 .pc-tag {
   position: absolute;
   top: 20px;
   left: 20px;
-
-  background-color: #2b4c3b; /* Dark Green */
+  background-color: #2b4c3b;
   color: #ffffff;
-
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-
   padding: 8px 20px;
   border-radius: 50px;
   border: none;
-
   z-index: 3;
 }
 
-/* =========================================
-   Bottom Content Container
-   ========================================= */
 .pc-content {
   position: absolute;
   bottom: 0;
@@ -92,9 +76,6 @@
   align-items: flex-start;
 }
 
-/* =========================================
-   Title (Elegant Italic Serif Font)
-   ========================================= */
 .pc-title {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2rem;
@@ -112,112 +93,213 @@
   transform: translateY(-4px);
 }
 
-/* =========================================
-   Hidden Content (Description + Button)
-   ========================================= */
-.pc-hidden {
+/* Description wrapper */
+.pc-desc-wrap {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
   transform: translateY(20px);
   transition: max-height 0.5s ease, opacity 0.4s ease, transform 0.4s ease;
+  width: 100%;
 }
 
-.pc-card:hover .pc-hidden {
+/* Desktop hover */
+.pc-card:hover .pc-desc-wrap {
   max-height: 250px;
   opacity: 1;
   transform: translateY(0);
+  margin-top: 12px;
 }
 
-/* Description */
 .pc-desc {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 0.9rem;
   line-height: 1.55;
   color: rgba(255, 255, 255, 0.85);
-  margin: 14px 0 20px;
+  margin: 0;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-/* =========================================
-   GOLDEN BUTTON
-   ========================================= */
+/* Button */
 .pc-btn {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  border: none;
+
   display: inline-flex;
   align-items: center;
   gap: 10px;
-
-  background-color: #cba357; /* Golden */
+  background-color: transparent;
   color: #ffffff;
-
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-
-  padding: 12px 26px;
-  border: 2px dotted #cba357; /* Golden dotted border */
-  border-radius: 50px;
-
   cursor: pointer;
-  transition: all 0.3s ease;
+  align-self: flex-start;
+  transition: max-height 0.5s ease, opacity 0.4s ease,
+              margin 0.4s ease, color 0.3s ease;
+}
+
+.pc-card:hover .pc-btn {
+  max-height: 60px;
+  opacity: 1;
+  margin-top: 14px;
 }
 
 .pc-btn:hover {
-  background-color: #b89246; /* Dark Golden */
-  border-color: #b89246;
-  border-style: solid;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(203, 163, 87, 0.4);
-}
-
-.pc-btn svg {
-  transition: transform 0.3s ease;
-}
-
-.pc-btn:hover svg {
-  transform: translateX(4px);
+  color: #cba357;
 }
 
 /* =========================================
-   MOBILE (Hover nahi hota, isliye sab dikhao)
+   MOBILE
    ========================================= */
 @media (max-width: 768px) {
   .pc-card {
-    height: 400px;
+    height: 260px;                 /* 👈 320px → 260px */
+    border-radius: 12px;
   }
 
   .pc-overlay {
     opacity: 1;
     background: linear-gradient(
       to top,
-      rgba(15, 23, 42, 0.95) 0%,
-      rgba(15, 23, 42, 0.5) 50%,
+      rgba(15, 23, 42, 0.75) 0%,
+      rgba(15, 23, 42, 0.4) 45%,
       transparent 100%
+    );
+    transition: opacity 0.4s ease, background 0.4s ease;
+  }
+
+  .pc-card-open .pc-overlay {
+    background: linear-gradient(
+      to top,
+      rgba(15, 23, 42, 0.98) 0%,
+      rgba(15, 23, 42, 0.75) 50%,
+      rgba(15, 23, 42, 0.2) 100%
     );
   }
 
-  .pc-title {
-    font-size: 1.6rem;
+  .pc-tag {
+    top: 12px;
+    left: 12px;
+    font-size: 9px;
+    padding: 5px 12px;
+    letter-spacing: 1.2px;
   }
 
-  .pc-hidden {
+  .pc-content {
+    padding: 14px;                 /* 👈 16px → 14px */
+    align-items: flex-start;
+  }
+
+  .pc-title {
+    font-size: 1.15rem;
+    line-height: 1.25;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    margin-bottom: 0;
+  }
+
+  /* Mobile pe hover disable */
+  .pc-card.pc-card:hover .pc-desc-wrap {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    margin-top: 0;
+  }
+
+  .pc-card.pc-card:hover .pc-btn {
+    max-height: 60px;
+    opacity: 1;
+  }
+
+  /* Description default hidden */
+  .pc-card .pc-desc-wrap {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(20px);
+    transition: max-height 0.5s ease, opacity 0.4s ease, transform 0.4s ease;
+    width: 100%;
+    display: block;
+  }
+
+  /* Tap pe visible */
+  .pc-card.pc-card-open .pc-desc-wrap {
     max-height: 300px;
     opacity: 1;
     transform: translateY(0);
+    margin-top: 8px;               /* 👈 10px → 8px */
   }
 
   .pc-desc {
-    font-size: 0.85rem;
-    -webkit-line-clamp: 2;
+    font-size: 0.78rem;
+    line-height: 1.5;
+    -webkit-line-clamp: 3;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    text-align: left;
+  }
+
+  /* View Project — white, right */
+  .pc-card .pc-btn {
+    max-height: 60px;
+    opacity: 1;
+    overflow: visible;
+    padding: 0;
+    margin-top: 6px;
+    border: none;
+
+    display: block;
+    width: 100%;
+    text-align: right;
+
+    background: transparent;
+    color: #ffffff;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    border-radius: 0;
+    box-shadow: none;
+    cursor: pointer;
+    align-self: auto;
+    transition: color 0.3s ease;
+  }
+
+  .pc-btn:hover {
+    background: transparent;
+    color: #22c55e;
+    transform: none;
+    box-shadow: none;
+    border: none;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .pc-card {
+    height: 240px;                 /* 👈 300px → 240px */
+  }
+
+  .pc-title {
+    font-size: 1.05rem;
+  }
+
+  .pc-desc {
+    font-size: 0.75rem;
   }
 
   .pc-btn {
-    padding: 10px 20px;
     font-size: 11px;
   }
 }

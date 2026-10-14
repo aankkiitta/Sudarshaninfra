@@ -1,25 +1,42 @@
 // src/components/PortfolioCard.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './PortfolioCard.css';
 
 const PortfolioCard = ({ id, tag, title, description, image, buttonText = "View Project" }) => {
   const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
 
-  const handleClick = () => {
+  const handleCardClick = () => {
+    // Mobile: pehla tap = desc open, dusra tap = navigate
+    if (window.innerWidth <= 768) {
+      if (!isOpen) {
+        setIsOpen(true);
+        return;
+      }
+    }
     if (id) {
       navigate(`/project/${id}`);
-      // 👇 Page top pe scroll
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+  };
+
+  const handleButtonClick = (e) => {
+    e.stopPropagation();
+    if (id) {
+      navigate(`/project/${id}`);
       window.scrollTo({ top: 0, behavior: 'instant' });
     }
   };
 
   return (
-    <div className="pc-card" onClick={handleClick}>
-      
+    <div
+      className={`pc-card ${isOpen ? 'pc-card-open' : ''}`}
+      onClick={handleCardClick}
+    >
       {/* Background Image */}
       <div className="pc-bg" style={{ backgroundImage: `url(${image})` }}></div>
-      
+
       {/* Dark Overlay */}
       <div className="pc-overlay"></div>
 
@@ -28,20 +45,18 @@ const PortfolioCard = ({ id, tag, title, description, image, buttonText = "View 
 
       {/* Bottom Content */}
       <div className="pc-content">
-        
+        {/* Title — always visible */}
         <h3 className="pc-title">{title}</h3>
-        
-        <div className="pc-hidden">
+
+        {/* Description — hover (desktop) / tap (mobile) pe */}
+        <div className="pc-desc-wrap">
           <p className="pc-desc">{description}</p>
-          <button className="pc-btn">
-            {buttonText}
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </button>
         </div>
 
+        {/* Button — hover (desktop) / always (mobile) */}
+        <button className="pc-btn" onClick={handleButtonClick}>
+          {buttonText}
+        </button>
       </div>
     </div>
   );
