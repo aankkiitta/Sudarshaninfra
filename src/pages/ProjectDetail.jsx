@@ -58,7 +58,6 @@ const ProjectDetail = () => {
       {/* 7. SIMILAR PROJECTS */}
       <SimilarProjects currentProjectId={project.id} />
 
-<Testimonials/>
       {/* 8. GET IN TOUCH */}
       <GetInTouch />
 

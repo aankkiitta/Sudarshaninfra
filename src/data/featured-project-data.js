@@ -1,5 +1,51 @@
 // src/data/featured-project-data.js
 
+
+
+
+// rubyy dadar
+
+import rubyDadar1 from "../image/Ruby-dadar/1.jpg";
+import rubyDadar2 from "../image/Ruby-dadar/2.jpg";
+import rubyDadar3 from "../image/Ruby-dadar/3.jpg";
+import rubyDadar4 from "../image/Ruby-dadar/4.jpg";
+import rubyDadar5 from "../image/Ruby-dadar/5.jpg";
+import rubyDadar6 from "../image/Ruby-dadar/6.jpg";
+import rubyDadar7 from "../image/Ruby-dadar/7.jpg";
+import rubyDadar8 from "../image/Ruby-dadar/8.jpg";
+import rubyDadar10 from "../image/Ruby-dadar/10.jpg";
+
+
+
+
+
+
+
+
+
+// rajkot gujrat
+
+// Rajkot Gujarat project images
+import rajkot1 from "../image/Rajkot/1.jpg";
+import rajkot2 from "../image/Rajkot/2.jpg";
+import rajkot3 from "../image/Rajkot/3.jpg";
+import rajkot4 from "../image/Rajkot/4.jpg";
+import rajkot5 from "../image/Rajkot/5.jpg";
+import rajkot6 from "../image/Rajkot/6.jpg";
+import rajkot7 from "../image/Rajkot/7.jpg";
+import rajkot8 from "../image/Rajkot/8.jpg";
+import rajkot9 from "../image/Rajkot/9.jpg";
+import rajkot10 from "../image/Rajkot/10.jpg";
+import rajkot11 from "../image/Rajkot/11.jpg";
+import rajkot12 from "../image/Rajkot/12.jpg";
+
+
+
+
+
+
+
+
 import video1 from '../components/video/video1.mp4';
 
 // =========================================
@@ -24,149 +70,220 @@ export const materialCategories = [
 // FEATURED PROJECTS
 // =========================================
 export const featuredProjects = [
- {
+{
   id: 1,
-  slug: "modern-minimalist-penthouse",
-  title: "Modern Minimalist Penthouse",
-  image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800",
-  heroImage: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=1920",
-  tag: "FURNITURE",
-  description: "High-quality office furniture solutions including workstations, executive cabins, conference tables, storage units, and customized furniture for modern workplaces.",
-  location: "Manhattan, NYC",
-  year: "Completed 2025",
-  type: "Residential",
-  size: "2,400 sq ft",
+  slug: "ruby-dadar-office-infrastructure",
+  title: "Ruby Dadar Office Infrastructure",
+image: rubyDadar1,
+heroImage: rubyDadar1,
+  tag: "OFFICE INFRASTRUCTURE",
 
-  aboutTitle: "A Sculptural Urban Sanctuary",
+  description: "Commercial office infrastructure solutions including electrical installations, structured Cat6 data cabling, RJ45 connectivity, plumbing works, lighting fixtures, and workspace infrastructure modifications.",
+
+  location: "Dadar, Mumbai",
+  year: "Completed",
+  type: "Commercial",
+  size: "Office Workspace",
+
+  aboutTitle: "Reliable Office Infrastructure by Sudarshan Infra",
+
   aboutParagraphs: [
-    "Perched high above the Manhattan skyline, this 2,400-square-foot penthouse redefines urban luxury through a lens of minimalist sophistication. The design philosophy centered on creating a serene retreat that feels both expansive and intimate — a place where light, texture, and proportion come together in perfect harmony.",
-    "Every surface, material, and detail was meticulously curated to evoke a sense of calm and timeless elegance. From the floor-to-ceiling windows that frame panoramic city views to the hand-selected natural stone and custom millwork, every element speaks to a refined design language."
+    "Sudarshan Infra carried out electrical, networking, and plumbing works at Ruby Dadar, helping establish a functional and well-connected office workspace. The electrical work included installing cylindrical light fixtures, modifying existing electrical points, providing 16A switch-controlled socket outlets, and installing RJ45 connectors. The team also laid 140 metres of D-Link Cat6 data cable to support office connectivity.",
+"Additional work included cable routing provisions through partitions, removing and refixing grid ceiling tiles, and providing the necessary carpentry support. Plumbing work involved installing S.S. jet sprays with flexible pipes. These services were executed to meet the office's infrastructure requirements, with a focus on practical functionality and reliable workmanship."
   ],
 
   details: [
-    { label: "Client", value: "Private Resident" },
-    { label: "Location", value: "Manhattan, NYC" },
-    { label: "Area", value: "2,400 sq.ft" },
-    { label: "Budget", value: "$1.2M" },
-    { label: "Duration", value: "6 Months" },
-    { label: "Completion", value: "March 2025" }
+    { label: "Client", value: "Ruby Dadar" },
+    { label: "Location", value: "Dadar, Mumbai" },
+    { label: "Project Type", value: "Commercial Office" },
+    { label: "Work Scope", value: "Electrical, Networking & Plumbing" },
+    { label: "Networking", value: "D-Link Cat6 Cabling" },
+    { label: "Completion", value: "As per project records" }
   ],
 
-  // 👇 MATERIALS USED
+  // MATERIALS & SERVICES USED
   materials: [
-    { name: "Italian Marble", category: "Flooring" },
-    { name: "Teak Wood", category: "Furniture" },
-    { name: "Gypsum Board", category: "False Ceiling" },
-    { name: "Asian Paints Royale", category: "Painting" },
-    { name: "Saint-Gobain Glass", category: "Windows" },
-    { name: "Kohler Fittings", category: "Bathroom" },
-    { name: "Havells Wiring", category: "Electrical" },
-    { name: "Godrej Locks", category: "Security" }
+    { name: "D-Link Cat6 Cable", category: "Networking" },
+    { name: "RJ45 Connectors", category: "Networking" },
+    { name: "Cylindrical Light Fixtures", category: "Electrical" },
+    { name: "16A Switches & Sockets", category: "Electrical" },
+    { name: "S.S. Jet Spray", category: "Plumbing" },
+    { name: "Flexible Plumbing Pipes", category: "Plumbing" },
+    { name: "Cable Routing", category: "Infrastructure" },
+    { name: "Grid Ceiling Tiles", category: "Civil Works" }
   ],
 
-  // 👇 MATERIAL CATEGORIES (random assignment)
-  materialCategories: ["flooring", "carpentry", "ceiling", "paint", "glass", "plumbing", "electrical", "security"],
+  materialCategories: [
+    "networking",
+    "electrical",
+    "plumbing",
+    "infrastructure",
+    "civil"
+  ],
 
-  // 👇👇👇 VIDEO TOUR — YE NAYA ADD KARO 👇👇👇
+  // VIDEO TOUR
   video: {
     src: video1,
     poster: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=1920",
-    title: "Penthouse Walkthrough",
-    subtitle: "A cinematic tour of this sculptural urban sanctuary",
-    description: "Explore every corner of this 2,400 sq ft penthouse — from the floor-to-ceiling windows to the hand-selected natural stone and custom millwork.",
+    title: "Ruby Dadar Project Walkthrough",
+    subtitle: "Office infrastructure and workspace improvements",
+    description: "Explore the Ruby Dadar project featuring electrical modifications, structured data cabling, RJ45 connectivity, lighting installations, plumbing works, and essential office infrastructure improvements.",
     highlights: [
-      "2,400 sq ft of refined luxury",
-      "Floor-to-ceiling skyline views",
-      "Italian marble + teak wood finishes"
+      "Structured D-Link Cat6 data cabling",
+      "Electrical installations and socket provisions",
+      "Plumbing and workspace infrastructure works"
     ]
   },
-  // 👆👆👆 VIDEO TOUR END 👆👆👆
 
   features: [
-    { icon: "home", title: "1 & 2 BHK", desc: "Thoughtfully planned residences" },
-    { icon: "layers", title: "6+ Lifestyle", desc: "Amenities & conveniences" },
-    { icon: "building", title: "Green Spaces", desc: "Designed for relaxed living" }
+    {
+      icon: "layers",
+      title: "Office Infrastructure",
+      desc: "Essential infrastructure for functional workspaces"
+    },
+    {
+      icon: "building",
+      title: "Commercial Setup",
+      desc: "Practical solutions for modern office environments"
+    },
+    {
+      icon: "zap",
+      title: "Electrical & Networking",
+      desc: "Lighting, power points and structured connectivity"
+    }
   ],
 
   stats: [
-    { value: "2,400", label: "SQUARE FEET" },
-    { value: "4", label: "BEDROOMS" },
-    { value: "3.5", label: "BATHROOMS" },
-    { value: "6", label: "MONTHS" }
+    { value: "Cat6", label: "DATA CABLING" },
+    { value: "RJ45", label: "CONNECTIVITY" },
+    { value: "3+", label: "WORK CATEGORIES" },
+    { value: "1", label: "OFFICE PROJECT" }
   ],
 
   gallery: [
-    { src: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800", label: "Living Room" },
-    { src: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800", label: "Balcony" },
-    { src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800", label: "Bedroom" },
-    { src: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800", label: "Kitchen" },
-    { src: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800", label: "Library" },
-    { src: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800", label: "Conference Room" }
-  ]
+  { src: rubyDadar1, label: "Modern Office Lounge" },
+  { src: rubyDadar2, label: "Contemporary Seating Area" },
+  { src: rubyDadar3, label: "Open Office Dining Space" },
+  { src: rubyDadar4, label: "Collaborative Workstations" },
+  { src: rubyDadar5, label: "Spacious Corporate Workspace" },
+  { src: rubyDadar6, label: "Ergonomic Office Workstations" },
+  { src: rubyDadar7, label: "Individual Workstation Setup" },
+  { src: rubyDadar8, label: "Modern Office Desk Installation" },
+  { src: rubyDadar10, label: "Completed Office Workstation Area" }
+]
 },
+ 
+
+
+
+{
+  id: 2,
+  slug: "rajkot-office-interior-works",
+  title: "Rajkot Office Interior & Civil Works",
+
+  image: rajkot1,
+heroImage: rajkot1,
+
+  tag: "CIVIL & INTERIOR",
+
+  description: "Comprehensive civil, carpentry, electrical, and interior works at Dr. Yagnik Road, Rajkot, Gujarat, including flooring, partitions, false ceilings, painting, office furniture, toilet and pantry works, lighting, and related infrastructure improvements.",
+
+  location: "Dr. Yagnik Road, Rajkot, Gujarat",
+  year: "Completed",
+  type: "Commercial",
+  size: "Office Interior Project",
+
+  aboutTitle: "Transforming Spaces Through Quality Workmanship",
+
+  aboutParagraphs: [
+    "Sudarshan Infra undertook a comprehensive range of civil and interior works for a commercial office project at Dr. Yagnik Road, Rajkot, Gujarat. The scope included masonry, cement plastering, wall preparation, vitrified tile flooring, false ceiling installation, partitions, and customized interior finishing.",
+    "The project also covered electrical works with light fittings, toilet and pantry improvements, office doors, storage units, reception furniture, painting, frosted film, roller blinds, and other supporting installations. These integrated services were designed to create a more functional, organized, and professionally finished office environment."
+  ],
+
+  details: [
+    { label: "Client", value: "As per project records" },
+    { label: "Location", value: "Dr. Yagnik Road, Rajkot, Gujarat" },
+    { label: "Project Type", value: "Commercial Office Interiors" },
+    { label: "Civil & Interior Works", value: "₹18,13,273.75 Estimated" },
+    { label: "Electrical Works", value: "₹3,61,240 Actual" },
+    { label: "Completion", value: "As per project records" }
+  ],
+
+  materials: [
+    { name: "Vitrified Tiles", category: "Flooring" },
+    { name: "Cement & Wall Putty", category: "Civil Works" },
+    { name: "Gypsum Ceiling", category: "False Ceiling" },
+    { name: "Modular Ceiling", category: "Ceiling" },
+    { name: "Laminate Partitions", category: "Carpentry" },
+    { name: "Glass Partitions", category: "Glazing" },
+    { name: "Office Storage Units", category: "Furniture" },
+    { name: "Light Fittings", category: "Electrical" }
+  ],
+
+  materialCategories: [
+    "flooring",
+    "civil",
+    "ceiling",
+    "carpentry",
+    "glass",
+    "furniture",
+    "electrical",
+    "painting"
+  ],
+
+  features: [
   {
-    id: 2,
-    slug: "corporate-office-fitout",
-    title: "Corporate Office Fit-Out",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800",
-    heroImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1920",
-    tag: "COMMERCIAL",
-    description: "Complete office interior fit-outs including partitions, false ceilings, flooring, modular workspaces, lighting, and turnkey workspace solutions.",
-    location: "Mumbai, India",
-    year: "Completed 2024",
-    type: "Commercial",
-    size: "5,200 sq ft",
-
-    aboutTitle: "Where Innovation Meets Productivity",
-    aboutParagraphs: [
-      "A complete corporate office fit-out designed to create a productive and inspiring workspace. The project blends modern aesthetics with functional efficiency, ensuring every corner of the office serves a purpose while maintaining a cohesive design language.",
-      "From modular partitions to premium flooring, false ceilings to custom workstations, each element was carefully selected to support collaboration and focus. The result is a workspace that feels both professional and welcoming, fostering creativity and productivity at every level."
-    ],
-
-    details: [
-      { label: "Client", value: "ABC Pvt Ltd" },
-      { label: "Location", value: "Mumbai, India" },
-      { label: "Area", value: "5,200 sq.ft" },
-      { label: "Budget", value: "₹2.5 Cr" },
-      { label: "Duration", value: "4 Months" },
-      { label: "Completion", value: "December 2024" }
-    ],
-
-    materials: [
-      { name: "Vitrified Tiles", category: "Flooring" },
-      { name: "Gypsum Board", category: "False Ceiling" },
-      { name: "Saint-Gobain Glass", category: "Partitions" },
-      { name: "Godrej Workstations", category: "Furniture" },
-      { name: "Philips LED Lights", category: "Lighting" },
-      { name: "Havells Wiring", category: "Electrical" },
-      { name: "Asian Paints", category: "Painting" },
-      { name: "Kone Elevators", category: "Elevators" }
-    ],
-
-    materialCategories: ["flooring", "ceiling", "glass", "carpentry", "electrical", "paint", "hvac", "security"],
-
-    features: [
-      { icon: "workstation", title: "80 Workstations", desc: "Modular & ergonomic design" },
-      { icon: "conference", title: "Conference Rooms", desc: "6 premium meeting spaces" },
-      { icon: "reception", title: "Reception Area", desc: "Elegant first impression" }
-    ],
-
-    stats: [
-      { value: "5,200", label: "SQUARE FEET" },
-      { value: "80", label: "WORKSTATIONS" },
-      { value: "6", label: "CABINS" },
-      { value: "4", label: "MONTHS" }
-    ],
-
-    gallery: [
-      { src: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800", label: "Reception" },
-      { src: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800", label: "Workstations" },
-      { src: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800", label: "Conference Room" },
-      { src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800", label: "Cabin" },
-      { src: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800", label: "Lounge" },
-      { src: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800", label: "Meeting Pod" }
-    ]
+    icon: "civil",
+    title: "Civil & Interior",
+    desc: "Flooring, masonry, partitions and finishing works"
   },
+  {
+    icon: "electrical",
+    title: "Electrical Works",
+    desc: "Lighting fixtures and essential electrical installations"
+  },
+  {
+    icon: "carpentry",
+    title: "Complete Fit-Out",
+    desc: "Ceilings, storage, furniture, toilet and pantry works"
+  }
+],
+
+  stats: [
+    { value: "18+", label: "INTERIOR WORK ITEMS" },
+    { value: "3+", label: "CORE WORK CATEGORIES" },
+    { value: "1", label: "OFFICE PROJECT" },
+    { value: "360°", label: "FIT-OUT SOLUTIONS" }
+  ],
+
+gallery: [
+  { src: rajkot1, label: "Conference Room" },
+  { src: rajkot2, label: "Pantry Counter & Sink" },
+  { src: rajkot3, label: "Modular Office Workstation" },
+  { src: rajkot4, label: "Glass Partition & Office Passage" },
+  { src: rajkot5, label: "Executive Workstation" },
+  { src: rajkot6, label: "Workstation & Storage" },
+  { src: rajkot7, label: "Office Storage Cabinets" },
+  { src: rajkot8, label: "Workspace Layout" },
+  { src: rajkot9, label: "Office Lounge Seating" },
+  { src: rajkot10, label: "Glass Meeting Room" },
+  { src: rajkot11, label: "Reception Counter" },
+  { src: rajkot12, label: "Modern Washroom Fixtures" }
+]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
   {
     id: 3,
     slug: "luxury-home-renovation",
