@@ -166,51 +166,100 @@
 /* =========================================
    MOBILE (max-width: 640px)
    ========================================= */
+/* =========================================
+   MOBILE (max-width: 640px)
+   ========================================= */
 @media (max-width: 640px) {
   .fp-hero {
-    height: 100vh;                     /* 👈 Full screen */
+    height: 100vh;
     min-height: 100vh;
     max-height: 100vh;
+    align-items: center;              /* 👈 Neeche se center me */
+    padding-top: 80px;                /* 👈 Header ke liye jagah */
+    padding-bottom: 40px;
   }
 
   .fp-hero-content {
-    padding: 0 20px 60px;
+    padding: 0 20px;                  /* 👈 Bottom padding hata di */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;          /* 👈 Vertically center */
+    height: 100%;
   }
 
   .fp-breadcrumb {
     font-size: 0.65rem;
     letter-spacing: 1.5px;
     gap: 8px;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     flex-wrap: wrap;
   }
 
   .fp-featured-badge {
     font-size: 0.65rem;
     padding: 6px 14px;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 
   .fp-hero-title {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+    font-size: 1.7rem;
+    margin-bottom: 18px;
+    line-height: 1.15;
   }
 
   .fp-hero-meta {
-    gap: 14px 24px;
+    gap: 10px 20px;
   }
 
   .fp-meta-item {
-    font-size: 0.78rem;
-    gap: 8px;
+    font-size: 0.75rem;
+    gap: 6px;
   }
 
   .fp-meta-icon {
-    width: 14px;
-    height: 14px;
+    width: 13px;
+    height: 13px;
   }
 }
 
+/* =========================================
+   SMALL MOBILE (max-width: 400px)
+   ========================================= */
+@media (max-width: 400px) {
+  .fp-hero {
+    padding-top: 70px;
+    padding-bottom: 30px;
+  }
+
+  .fp-hero-content {
+    padding: 0 16px;
+  }
+
+  .fp-hero-title {
+    font-size: 1.5rem;
+    margin-bottom: 14px;
+  }
+
+  .fp-breadcrumb {
+    font-size: 0.6rem;
+    margin-bottom: 10px;
+  }
+
+  .fp-featured-badge {
+    font-size: 0.6rem;
+    padding: 5px 12px;
+    margin-bottom: 12px;
+  }
+
+  .fp-meta-item {
+    font-size: 0.7rem;
+  }
+
+  .fp-meta-icon {
+    width: 12px;
+    height: 12px;
+  }
+}
 /* =========================================
    SMALL MOBILE (max-width: 400px)
    ========================================= */

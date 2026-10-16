@@ -10,6 +10,7 @@ import QuickEnquiry from '../components/QuickEnquiry';
 import Contact from '../components/Contact';
 import WorkingProcess from '../components/Project/WorkingProcess';
 import WhyChooseUs from '../components/Project/WhyChooseUs';
+import Clients from '../components/Clients';
 const Home = () => {
   return (
     <>
@@ -17,6 +18,7 @@ const Home = () => {
       <Services />
         <FeaturedProjects />
         <WorkingProcess/>
+        <Clients/>
       <About />
       <LegacyCounter />
     <WhyChooseUs/>
