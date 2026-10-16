@@ -38,6 +38,7 @@ import rajkot9 from "../image/Rajkot/9.jpg";
 import rajkot10 from "../image/Rajkot/10.jpg";
 import rajkot11 from "../image/Rajkot/11.jpg";
 import rajkot12 from "../image/Rajkot/12.jpg";
+import rajkotvideo from "../image/Rajkot/rajkotvideo.mp4";
 
 
 
@@ -182,7 +183,7 @@ heroImage: rubyDadar1,
   title: "Rajkot Office Interior & Civil Works",
 
   image: rajkot1,
-heroImage: rajkot1,
+  heroImage: rajkot1,
 
   tag: "CIVIL & INTERIOR",
 
@@ -232,22 +233,22 @@ heroImage: rajkot1,
   ],
 
   features: [
-  {
-    icon: "civil",
-    title: "Civil & Interior",
-    desc: "Flooring, masonry, partitions and finishing works"
-  },
-  {
-    icon: "electrical",
-    title: "Electrical Works",
-    desc: "Lighting fixtures and essential electrical installations"
-  },
-  {
-    icon: "carpentry",
-    title: "Complete Fit-Out",
-    desc: "Ceilings, storage, furniture, toilet and pantry works"
-  }
-],
+    {
+      icon: "civil",
+      title: "Civil & Interior",
+      desc: "Flooring, masonry, partitions and finishing works"
+    },
+    {
+      icon: "electrical",
+      title: "Electrical Works",
+      desc: "Lighting fixtures and essential electrical installations"
+    },
+    {
+      icon: "carpentry",
+      title: "Complete Fit-Out",
+      desc: "Ceilings, storage, furniture, toilet and pantry works"
+    }
+  ],
 
   stats: [
     { value: "18+", label: "INTERIOR WORK ITEMS" },
@@ -256,22 +257,35 @@ heroImage: rajkot1,
     { value: "360°", label: "FIT-OUT SOLUTIONS" }
   ],
 
-gallery: [
-  { src: rajkot1, label: "Conference Room" },
-  { src: rajkot2, label: "Pantry Counter & Sink" },
-  { src: rajkot3, label: "Modular Office Workstation" },
-  { src: rajkot4, label: "Glass Partition & Office Passage" },
-  { src: rajkot5, label: "Executive Workstation" },
-  { src: rajkot6, label: "Workstation & Storage" },
-  { src: rajkot7, label: "Office Storage Cabinets" },
-  { src: rajkot8, label: "Workspace Layout" },
-  { src: rajkot9, label: "Office Lounge Seating" },
-  { src: rajkot10, label: "Glass Meeting Room" },
-  { src: rajkot11, label: "Reception Counter" },
-  { src: rajkot12, label: "Modern Washroom Fixtures" }
-]
-},
+  gallery: [
+    { src: rajkot1, label: "Conference Room" },
+    { src: rajkot2, label: "Pantry Counter & Sink" },
+    { src: rajkot3, label: "Modular Office Workstation" },
+    { src: rajkot4, label: "Glass Partition & Office Passage" },
+    { src: rajkot5, label: "Executive Workstation" },
+    { src: rajkot6, label: "Workstation & Storage" },
+    { src: rajkot7, label: "Office Storage Cabinets" },
+    { src: rajkot8, label: "Workspace Layout" },
+    { src: rajkot9, label: "Office Lounge Seating" },
+    { src: rajkot10, label: "Glass Meeting Room" },
+    { src: rajkot11, label: "Reception Counter" },
+    { src: rajkot12, label: "Modern Washroom Fixtures" }
+  ],
 
+  // 👇 VIDEO SECTION — Added Here
+  video: {
+    src: rajkotvideo, // Replace with your actual video URL
+    poster: rajkot1,                                    // Poster image (uses your existing image)
+    title: "Rajkot Office — Video Walkthrough",
+    subtitle: "A quick cinematic tour of the completed office interior and civil works at Dr. Yagnik Road, Rajkot.",
+    highlights: [
+      "Complete civil & interior fit-out",
+      "Modular workstations and storage",
+      "Glass partitions & false ceilings",
+      "Electrical, plumbing and pantry works"
+    ]
+  }
+},
 
 
 
